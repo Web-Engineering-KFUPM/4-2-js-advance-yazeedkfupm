@@ -14,9 +14,6 @@ INSTRUCTIONS:
 // ==========================
 // TODO-1: OBJECT with GETTERS & SETTERS
 // ==========================
-// ==========================
-// TODO-1: OBJECT with GETTERS & SETTERS (No Underscore)
-// ==========================
 
 const student = {
   firstName: "Alice",
