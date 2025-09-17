@@ -14,14 +14,11 @@ INSTRUCTIONS:
 // ==========================
 // TODO-1: OBJECT with GETTERS & SETTERS
 // ==========================
-// ==========================
-// TODO-1: OBJECT with GETTERS & SETTERS (No Underscore)
-// ==========================
 
 const student = {
-  firstName: "Alice",
-  lastName: "Johnson",
-  gpaValue: 3.5, 
+  firstName: "yazed",
+  lastName: "Almutairi",
+  gpaValue: 3.6, 
 
   // Getter for full name
   get fullName() {
@@ -34,11 +31,11 @@ const student = {
   },
 
   // Setter for GPA with validation
-  set gpa(newGpa) {
-    if (newGpa >= 0.0 && newGpa <= 4.0) {
-      this.gpaValue = newGpa;
+  set gpa(value) {
+    if (value >= 0.0 && value <= 4.0) {
+      this.gpaValue = value;
     } else {
-      console.log("Invalid GPA! Must be between 0.0 and 4.0");
+      console.log("Invalid GPA Must be between 0.0 and 4.0");
     }
   }
 };
@@ -56,11 +53,12 @@ console.log("After invalid update, GPA:", student.gpa);
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
 // ====================================
+
 const courses = {
-  "CS101": "Introduction to Computer Science",
-  "JS201": "Advanced JavaScript",
-  "DB301": "Database Management",
-  "AI401": "Artificial Intelligence"
+  "ICS104": "Introduction to Python",
+  "SWE363": "Web development",
+  "ICS321": "Database Management",
+  "COE292": "Artificial Intelligence"
 };
 
 // Iterate using for in loop
@@ -71,14 +69,14 @@ for (let code in courses) {
 // TODO-3: STRING OBJECT — charAt() & length
 // =========================================
 
-let message = "JavaScript Rocks!";
+let message = "Hello!";
 
 
 console.log("Length of string:", message.length);
 
 
-console.log("First character:", message.charAt(0));       // J
-console.log("Fifth character:", message.charAt(4));       // S
+console.log("First character:", message.charAt(0));       // H
+console.log("Fifth character:", message.charAt(5));       // o
 console.log("Last character:", message.charAt(message.length - 1)); 
 
 // ===================================
@@ -112,18 +110,18 @@ console.log("Maximum:", max);
 
 function findMax(arr) {
   if (arr.length === 0) {
-    throw new Error("Array is empty!");
+    throw new Error("Array must not be empty!");
   }
   return Math.max(...arr);
 }
 
 try {
-  let result = findMax([]); // Intentionally empty array
+  let result = findMax([]); //empty array
   console.log("Max value:", result);
 } catch (e) {
-  console.log("Error caught:", e.message);
+  console.log("Error:", e.message);
 } finally {
-  console.log("Finally block executed (cleanup or finishing step).");
+  console.log("block executed (cleanup or finishing step).");
 }
 
 
@@ -131,10 +129,10 @@ try {
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
 // ===================================================================================
 
-const words = ["ban", "babble", "make", "flab"];
-const pattern = /ab/; 
+const words = ["cat", "rabbit", "dragon", "caterpillar"];
+const pattern = /cat/; 
 
-console.log("Words containing 'ab':");
+console.log("Words containing 'cat':");
 
 words.forEach(word => {
   if (pattern.test(word)) {
